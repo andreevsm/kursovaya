@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 import config from 'config';
+
+// [TODO]: Написать .d.types для этой библиотеки
 const beautifyUnique = require('mongoose-beautiful-unique-validation');
 
 mongoose.set('debug', config.get('mongodb.debug'));
@@ -9,4 +11,4 @@ mongoose.connect(config.get('mongodb.uri'), {
   useUnifiedTopology: true
 });
 
-module.exports = mongoose;
+export { mongoose };

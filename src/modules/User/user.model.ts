@@ -1,4 +1,4 @@
-const mongoose = require('../../lib/mongoose');
+import { mongoose } from '../../lib';
 
 const publicFields = ['email', 'displayName'];
 
@@ -27,4 +27,4 @@ const userSchema = new mongoose.Schema({
 
 userSchema.statics.publicFields = publicFields;
 
-module.exports = mongoose.model('User', userSchema);
+export default mongoose.model('User', userSchema);
