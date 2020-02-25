@@ -25,7 +25,8 @@
     "koa-logger": "^3.2.1",
     "koa-router": "^8.0.8",
     "mongoose": "^5.9.1",
-    "mongoose-beautiful-unique-validation": "^7.1.1"
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "neode": "^0.4.0"
   },
   "devDependencies": {
     "@types/config": "0.0.36",
