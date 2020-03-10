@@ -12,7 +12,7 @@ courseRouter
     ctx.body = courses;
   });
 
-  courseRouter
+courseRouter
   .post('/', async (ctx: IRouterContext) => {
     await Course.create(ctx.request.body);
   });
