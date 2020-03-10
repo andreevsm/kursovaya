@@ -6,5 +6,10 @@ export default {
   },
   server: {
     port: 3000
+  },
+  neo4j: {
+    url: 'bolt://localhost:7687',
+    username: 'neo4j',
+    password: '1234'
   }
 };

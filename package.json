@@ -26,6 +26,7 @@
     "koa-router": "^8.0.8",
     "mongoose": "^5.9.1",
     "mongoose-beautiful-unique-validation": "^7.1.1",
+    "neo4j-driver": "^4.0.1",
     "neode": "^0.4.0"
   },
   "devDependencies": {
