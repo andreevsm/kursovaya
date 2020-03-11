@@ -1,5 +1,5 @@
 # MongoDB
-1. mongod --dbpath Desktop/NoSQL/mongodb
+1. mongod --dbpath ~/Desktop/NoSQL/mongodb
 2. mongo
 3. use kursovaya
 4. For example: db.courses.find()
