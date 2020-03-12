@@ -11,3 +11,5 @@ CREATE (s1:Student { name: 'Vasya' })-[:ESTIMATE {}]->(t:Tutor { name: 'Murlin' 
 (s2)-[:HAS]->(c),
 (t)-[con:CONDUCT]->(c)
 RETURN s1, t, r, f, con, s2, c
+
+# Redis
