@@ -18,4 +18,3 @@ initErrors(app);
 initPassport(app);
 
 app.use(router.routes());
-

@@ -36,8 +36,10 @@ const userSchema = new mongoose.Schema({
 const generatePassword = (salt: string, password: string) => {
   return new Promise((resolve, reject) => {
     pbkdf2(
-      password, salt,
-      config.get('crypto.hash.iterations'), config.get('crypto.hash.length'),
+      password,
+      salt,
+      config.get('crypto.hash.iterations'),
+      config.get('crypto.hash.length'),
       'sha512',
       (err, key) => {
         if (err) return reject(err);
@@ -54,6 +56,7 @@ userSchema.methods.setPassword = async function (password: string) {
 
   this.salt = randomBytes(config.get('crypto.hash.length')).toString('hex');
   this.passwordHash = await generatePassword(this.salt, password);
+  console.log('passwordHash', this.passwordHash);
 };
 
 userSchema.methods.checkPassword = async function (password: string) {
