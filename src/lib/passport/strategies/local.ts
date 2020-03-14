@@ -9,7 +9,6 @@ const localStrategy = new Strategy(
   },
   async (email, password, done) => {
     try {
-
       // [TODO]: Расширить тип для User
       const user: any = await User.findOne({ email });
 
