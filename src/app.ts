@@ -4,7 +4,8 @@ import {
   initBodyParser,
   initErrors,
   initFavicon,
-  initLogger
+  initLogger,
+  initPassport
 } from './handlers';
 import { router } from './routes';
 
@@ -14,6 +15,7 @@ initLogger(app);
 initBodyParser(app);
 initFavicon(app);
 initErrors(app);
+initPassport(app);
 
 app.use(router.routes());
 

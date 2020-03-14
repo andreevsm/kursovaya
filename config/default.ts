@@ -11,5 +11,12 @@ export default {
     url: 'bolt://localhost:7687',
     username: 'neo4j',
     password: '1234'
+  },
+  secret: 'mysecret',
+  crypto: {
+    hash: {
+      length: 128,
+      iterations: 10
+    }
   }
 };

@@ -4,3 +4,4 @@ export * from './Question';
 export * from './Student';
 export * from './Tutor';
 export * from './Neo4j';
+export * from './User';
