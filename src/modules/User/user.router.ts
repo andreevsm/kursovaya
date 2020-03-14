@@ -9,14 +9,8 @@ export const userRouter = new Router({
 
 userRouter
   .post('/create', async (ctx: IRouterContext) => {
-
-    console.log('body', ctx.request.body);
-
     const user = new User(ctx.request.body);
-    console.log('user', user);
     await user.setPassword(ctx.request.body.password);
-    console.log('user', user);
-
     await user.save();
   });
 
