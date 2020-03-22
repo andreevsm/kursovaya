@@ -15,13 +15,15 @@ userRouter
   });
 
 userRouter
-  .get('/', async (ctx: IRouterContext) => {
+  .get('/', async (ctx: any) => {
+
+    console.log('awasome', ctx);
+    console.log('ctx.session', ctx.session);
     ctx.body = 'Пользователь не найден'
   });
 
 userRouter
   .post('/login', async (ctx: any, next: any) => {
-    console.log(next);
     await passport.authenticate('local', async (error, user, info) => {
       console.log(error);
       if (error) {
@@ -35,9 +37,13 @@ userRouter
           displayName: user.displayName,
           email: user.email
         };
+
+        ctx.session!.userEmail = user.email;
+        ctx.session!.createdAt = new Date();
       } else {
         ctx.status = 401;
         ctx.body = info;
       }
+      console.log('ctx.isAuthenticated()', ctx.isAuthenticated());
     })(ctx, next);
   });
