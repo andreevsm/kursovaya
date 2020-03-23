@@ -7,7 +7,7 @@ import redisStore, { RedisOptions } from 'koa-redis';
 const REDIS_OPTIONS: RedisOptions = {
   host: config.get('redis.host'),
   port: config.get('redis.port'),
-  password: config.get('redis.password')
+  password: config.get('redis.password'),
 }
 
 export const initRedisSession = (app: Koa) => {
