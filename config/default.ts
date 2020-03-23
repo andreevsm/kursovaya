@@ -18,5 +18,14 @@ export default {
       length: 128,
       iterations: 10
     }
+  },
+  redis: {
+    port: 6379,
+    host: 'localhost',
+    password: 'secret'
+  },
+  session: {
+    secret: 'wtf',
+    resave: false
   }
 };
