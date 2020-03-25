@@ -1,3 +1,8 @@
+# Change log
+
+## 25.03.2020
+- Добавил хранение сессий в Redis
+
 # MongoDB
 1. mongod --dbpath ~/Desktop/NoSQL/mongodb
 2. mongo
