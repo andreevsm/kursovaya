@@ -10,9 +10,7 @@ formRouter
   .get('/', async (ctx: IRouterContext) => {
     const forms = await Form.find();
     ctx.body = forms;
-  });
-
-formRouter
+  })
   .post('/', async (ctx: IRouterContext) => {
     await Form.create(ctx.request.body);
   });
