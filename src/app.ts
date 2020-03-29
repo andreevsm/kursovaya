@@ -5,10 +5,11 @@ import {
   initErrors,
   initFavicon,
   initLogger,
-  initPassport
+  initPassport,
+  initRedisSession,
+  initInfluxDB
 } from './handlers';
 import { router } from './routes';
-import { initRedisSession } from './handlers/redis';
 
 export const app = new Koa();
 
@@ -18,5 +19,6 @@ initFavicon(app);
 initErrors(app);
 initPassport(app);
 initRedisSession(app);
+initInfluxDB(app);
 
 app.use(router.routes());

@@ -27,5 +27,9 @@ export default {
   session: {
     secret: 'wtf',
     resave: false
+  },
+  influx: {
+    host: 'localhost',
+    database: 'kursovaya'
   }
 };

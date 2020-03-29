@@ -7,7 +7,8 @@ import {
   studentRouter,
   tutorRouter,
   neo4jRouter,
-  userRouter
+  userRouter,
+  responseTimestampsRouter
 } from './modules';
 
 const router = new Router({
@@ -22,6 +23,7 @@ router.use(studentRouter.routes());
 router.use(tutorRouter.routes());
 router.use(neo4jRouter.routes());
 router.use(userRouter.routes());
+router.use(responseTimestampsRouter.routes());
 
 router.get('/', (ctx: IRouterContext) => {
   ctx.body = new Date();
