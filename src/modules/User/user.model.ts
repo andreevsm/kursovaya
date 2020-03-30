@@ -56,7 +56,6 @@ userSchema.methods.setPassword = async function (password: string) {
 
   this.salt = randomBytes(config.get('crypto.hash.length')).toString('hex');
   this.passwordHash = await generatePassword(this.salt, password);
-  console.log('passwordHash', this.passwordHash);
 };
 
 userSchema.methods.checkPassword = async function (password: string) {
