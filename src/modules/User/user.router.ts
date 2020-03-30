@@ -12,17 +12,12 @@ userRouter
     const user = new User(ctx.request.body);
     await user.setPassword(ctx.request.body.password);
     await user.save();
-  });
-
-userRouter
+  })
   .get('/', async (ctx: any) => {
-
     console.log('awasome', ctx);
     console.log('ctx.session', ctx.session);
     ctx.body = 'Пользователь не найден'
-  });
-
-userRouter
+  })
   .post('/login', async (ctx: any, next: any) => {
     await passport.authenticate('local', async (error, user, info) => {
       console.log(error);

@@ -1,5 +1,5 @@
 export * from './logger';
-export * from './bodyParser';
+export * from './body-parser';
 export * from './errors';
 export * from './favicon';
 export * from './passport';

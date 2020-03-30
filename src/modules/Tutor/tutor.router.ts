@@ -10,9 +10,7 @@ tutorRouter
   .get('/', async (ctx: IRouterContext) => {
     const tutors = await Tutor.find();
     ctx.body = tutors;
-  });
-
-tutorRouter
+  })
   .post('/', async (ctx: IRouterContext) => {
     await Tutor.create(ctx.request.body);
   });
