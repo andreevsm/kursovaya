@@ -12,7 +12,7 @@ export default {
     username: 'neo4j',
     password: '1234'
   },
-  secret: 'mysecret',
+  secret: 'app',
   crypto: {
     hash: {
       length: 128,
@@ -25,7 +25,7 @@ export default {
     password: 'secret'
   },
   session: {
-    secret: 'wtf',
+    secret: 'app',
     resave: false
   },
   influx: {

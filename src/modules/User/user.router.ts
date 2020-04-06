@@ -35,10 +35,11 @@ userRouter
 
         ctx.session!.userEmail = user.email;
         ctx.session!.createdAt = new Date();
+        ctx.session!.role = user.role;
+        ctx.session!.id = user._id;
       } else {
         ctx.status = 401;
         ctx.body = info;
       }
-      console.log('ctx.isAuthenticated()', ctx.isAuthenticated());
     })(ctx, next);
   });

@@ -18,3 +18,10 @@ CREATE (s1:Student { name: 'Vasya' })-[:ESTIMATE {}]->(t:Tutor { name: 'Murlin' 
 RETURN s1, t, r, f, con, s2, c
 
 # Redis
+1. redis-cli
+
+# Роли пользователей:
+1. 0 - Администратор
+2. 1 - Контент - менеджер
+3. 2 - Преподаватель
+4. 3 - Студент

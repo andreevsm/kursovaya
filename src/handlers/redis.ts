@@ -14,7 +14,8 @@ export const initRedisSession = (app: Koa) => {
   app.keys = ['keys', 'keykeys'];
 
   app.use(session({
-    key: 'secret',
+    key: 'app',
+    maxAge: 86400000,
     store: redisStore(REDIS_OPTIONS),
   }, app));
 }

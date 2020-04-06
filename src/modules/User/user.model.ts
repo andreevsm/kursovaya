@@ -9,13 +9,18 @@ const userSchema = new mongoose.Schema({
     required: 'E-mail пользователя не должен быть пустым.',
     validate: [
       {
-        validator(value: any) {
+        validator(value: string) {
           return /^[-.\w]+@([\w-]+\.)+[\w-]{2,12}$/.test(value);
         },
         message: 'Некорректный email.'
       }
     ],
     unique: 'Такой email уже существует'
+  },
+  role: {
+    type: Number,
+    default: 3,
+    required: 'Необходимо указать роль на сайте',
   },
   displayName: {
     type: String,
