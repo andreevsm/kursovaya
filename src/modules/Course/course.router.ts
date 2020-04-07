@@ -13,8 +13,6 @@ courseRouter
   .get('/', async (ctx: any) => {
     const { session } = ctx;
 
-    console.log(session);
-
     const { records } = await neo4jDriver
       .session()
       .run(`
