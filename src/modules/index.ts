@@ -5,3 +5,4 @@ export * from './Student';
 export * from './Tutor';
 export * from './User';
 export * from './ResponseTimestamps';
+export * from './Answer';

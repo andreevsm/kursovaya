@@ -7,7 +7,8 @@ import {
   studentRouter,
   tutorRouter,
   userRouter,
-  responseTimestampsRouter
+  responseTimestampsRouter,
+  answerRouter
 } from './modules';
 
 const router = new Router({
@@ -22,6 +23,7 @@ router.use(studentRouter.routes());
 router.use(tutorRouter.routes());
 router.use(userRouter.routes());
 router.use(responseTimestampsRouter.routes());
+router.use(answerRouter.routes());
 
 router.get('/', (ctx: IRouterContext) => {
   ctx.body = new Date();
