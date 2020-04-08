@@ -3,7 +3,7 @@ import Router, { IRouterContext } from 'koa-router';
 import { Answer } from './answer.module';
 
 export const answerRouter = new Router({
-  prefix: '/answer'
+  prefix: '/answers'
 })
 
 answerRouter
