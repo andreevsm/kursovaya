@@ -19,12 +19,17 @@
 4. For example: db.courses.find().pretty() - удобно выводит в консоль полученные данные
 
 # Neo4J
+1. Создание связей
 CREATE (s1:Student { name: 'Vasya' })-[:ESTIMATE {}]->(t:Tutor { name: 'Murlin' })-[r:RELATE {}]->(f:Form { name:'Успеваемость преподавателей' }),
 (s1)-[:HAS]->(c:Course { name: "Разработка сетевых приложений" }),
 (s2:Student { name: 'Sergey' })-[:ESTIMATE {}]->(t),
 (s2)-[:HAS]->(c),
 (t)-[con:CONDUCT]->(c)
 RETURN s1, t, r, f, con, s2, c
+
+2. Удаление всех узлов и связей
+MATCH (n)
+DETACH DELETE n
 
 # Redis
 1. redis-cli
