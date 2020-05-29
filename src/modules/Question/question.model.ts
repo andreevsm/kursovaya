@@ -1,6 +1,6 @@
 import { mongoose } from '../../lib';
 
-const questionSchema = new mongoose.Schema({
+export const questionSchema = new mongoose.Schema({
   name: {
     type: String,
     required: 'Необходимо ввести название вопроса'

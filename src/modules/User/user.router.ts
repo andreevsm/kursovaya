@@ -42,4 +42,7 @@ userRouter
         ctx.body = info;
       }
     })(ctx, next);
-  });
+  })
+  .get('/logout', async (ctx: any) => {
+    ctx.session = null;
+  })

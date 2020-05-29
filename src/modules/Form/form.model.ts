@@ -1,4 +1,5 @@
 import { mongoose } from '../../lib';
+import { questionSchema } from '../Question';
 
 const formSchema = new mongoose.Schema({
   title: {
@@ -8,7 +9,8 @@ const formSchema = new mongoose.Schema({
   description: {
     type: String,
     required: 'Необходимо ввести описание анкеты'
-  }
+  },
+  questions: [questionSchema],
 }, {
   timestamps: true,
 })

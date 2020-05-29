@@ -18,7 +18,7 @@ studentRouter
   .get('/answers', async (ctx: any) => {
     const { session } = ctx;
 
-    const answers = await Answer.find({ student: { id: session.id } });
+    const answers = await Answer.find({ 'student.id': session.id });
     ctx.body = answers;
   })
   .get('/answers/:id', async (ctx: any) => {
@@ -26,6 +26,6 @@ studentRouter
     console.log(session.id);
     console.log(params.id);
 
-    const answers = await Answer.find({ _id: params.id, student: { id: session.id } });
+    const answers = await Answer.find({ _id: params.id, 'student.id': session.id });
     ctx.body = answers;
   });
