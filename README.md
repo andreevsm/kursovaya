@@ -27,6 +27,9 @@ RETURN s1, t, r, f, con, s2, c
 # Redis
 1. redis-cli
 
+# InfluxDB
+1. influxd
+
 # Роли пользователей:
 1. 0 - Администратор
 2. 1 - Контент - менеджер
